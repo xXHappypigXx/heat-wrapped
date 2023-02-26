@@ -89,7 +89,7 @@ function save() {
         } else {
             document.getElementById('login-message').innerHTML = 'Invalid code';
         }
-        counter = db.getItem(inputCode).catch(err => counter = 0);
+        counter = db.getItem(inputCode).catch(err => return 0);
         document.getElementById('clicked-counter').innerHTML = 'You have clicked the button ' + counter + ' times.';
     });
 </script>
