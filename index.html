@@ -4,10 +4,110 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@48,400,0,0" />
+    <style>
+        @import url('https://fonts.googleapis.com/css2?family=Righteous&display=swap');
+
+* {
+  font-family: 'Righteous', cursive;
+}
+
+.button-36 {
+  background-image: linear-gradient(92.88deg, #455EB5 9.16%, #5643CC 43.89%, #673FD7 64.72%);
+  border-radius: 8px;
+  border-style: none;
+  box-sizing: border-box;
+  color: #FFFFFF;
+  cursor: pointer;
+  flex-shrink: 0;
+  font-family: "Inter UI","SF Pro Display",-apple-system,BlinkMacSystemFont,"Segoe UI",Roboto,Oxygen,Ubuntu,Cantarell,"Open Sans","Helvetica Neue",sans-serif;
+  font-size: 16px;
+  font-weight: 500;
+  height: 4rem;
+  padding: 0 1.6rem;
+  text-align: center;
+  text-shadow: rgba(0, 0, 0, 0.25) 0 3px 8px;
+  transition: all .5s;
+  user-select: none;
+  -webkit-user-select: none;
+  touch-action: manipulation;
+}
+
+.button-36:hover {
+  box-shadow: rgba(80, 63, 205, 0.5) 0 1px 30px;
+  transition-duration: .1s;
+}
+
+@media (min-width: 768px) {
+  .button-36 {
+    padding: 0 2.6rem;
+  }
+}
+
+.counter {
+  font-size: 100px;
+}
+
+.fullprofile {
+  display: flex;
+  flex-direction: column;
+}
+
+.button-36 {
+  width: 10%;
+}
+
+.button-36:hover {
+  width: 10.5%;
+  height: 65px;
+}
+
+.profilename {
+  
+}
+
+.material-symbols-outlined {
+  color: aqua;
+  font-variation-settings:
+  'FILL' 0,
+  'wght' 400,
+  'GRAD' 0,
+  'opsz' 48
+}
+
+.namewithverify {
+  display: flex;
+}
+    </style>
 </head>
 <body>
-    <a href="http://adfoc.us/79813687413684/">Adfocus</a>
-    <a href="http://link-hub.net/603412/no-rickroll/">Link Hub</a>
+    
+
+
+<div class="fullprofile"></div>
+<div class="namewithverify">
+  <div class="profilename">Name</div><span class="material-symbols-outlined">Check_Circle</span>
+<button class="button-36" role="button">Folgen</button>
+<div class="counter">0</div>
+
+
+
+<script>
+    let count = 0;
+    document.querySelector(".button-36").addEventListener("click", function() {
+        if (this.innerHTML === "Gefolgt") {
+            this.innerHTML = "Folgen";
+            this.style.backgroundColor = "";
+            count--;
+        } else {
+            this.innerHTML = "Gefolgt";
+            this.style.backgroundColor = "red";
+            count++;
+        }
+        document.querySelector('.counter').innerHTML = count;
+    });
+</script>
+
+</div>
 </body>
 </html>
