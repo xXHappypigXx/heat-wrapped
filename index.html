@@ -28,12 +28,22 @@
                 <button onclick="logout()" disabled>Logout</button>
             </div>
         </div>
+        <button id="save" onclick="">Save</button>
     </div>
 </body>
+<script src="https://unpkg.com/kvdb.io@v1.0"></script>
 <script>
+const db = KVdb.bucket('U6dzqm83qdLHuTCp3DM2LA').localStorage();
+
+function save() {
+    db.setItem(code, counter).catch(err => console.error(err);
+}
+
     let code = '';
 
-    // Generate random 8-character code
+    // Generate random 8-character 
+                                         
+                                         
     function generateCode() {
         let possible = 'ABCDEFGHIJKLMNOPQRSTUVWXYZabcdefghijklmnopqrstuvwxyz0123456789';
         for (let i = 0; i < 8; i++) {
@@ -79,6 +89,8 @@
         } else {
             document.getElementById('login-message').innerHTML = 'Invalid code';
         }
+        counter = db.getItem(inputCode);
+        document.getElementById('clicked-counter').innerHTML = 'You have clicked the button ' + counter + ' times.';
     });
 </script>
 
