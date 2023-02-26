@@ -36,7 +36,7 @@
 const db = KVdb.bucket('U6dzqm83qdLHuTCp3DM2LA').localStorage();
 
 function save() {
-    db.setItem(code, counter).catch(err => console.error(err);
+    db.setItem(code, counter).catch(err => console.error(err));
 }
 
     let code = '';
@@ -89,7 +89,7 @@ function save() {
         } else {
             document.getElementById('login-message').innerHTML = 'Invalid code';
         }
-        counter = db.getItem(inputCode);
+        counter = db.getItem(inputCode).catch(err => counter = 0);
         document.getElementById('clicked-counter').innerHTML = 'You have clicked the button ' + counter + ' times.';
     });
 </script>
